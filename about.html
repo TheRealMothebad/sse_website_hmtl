@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <!-- Include the template -->
+  <div data-include="templates/layout.html">
+    <!-- Fill slots -->
+    <div slot="header">
+      <section class="page-title-banner fade-in">
+        <h1>About Us</h1>
+      </section>
+    </div>
+
+    <div slot="content">
+      <!-- About Section -->
+      <section id="about" class="content-section fade-in">
+        <img src="static/media/about.jpg" alt="About us">
+        <div class="text">
+          <h2>The team</h2>
+          <p>We are a passionate team of students working on amazing projects, like a weedwhacker engine.</p>
+        </div>
+      </section>
+      <section id="members" class="content-section fade-in">
+        <h3>Placeholder for future team table</h3>
+        <table>
+          <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+        </table>
+      </section>
+    </div>
+  </div>
+
+  <script src="static/template-loader.js"></script>
+  <script src="static/script.js"></script>
+</body>
+</html>
+
