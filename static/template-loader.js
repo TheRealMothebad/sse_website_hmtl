@@ -35,6 +35,23 @@ async function loadTemplates(root = document) {
   if (document.querySelector("[data-include]")) {
     await loadTemplates(document);
   }
+
+  fade_in()
+}
+
+function fade_in() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // only fade in once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  // Select all elements you want to animate
+  const elements = document.querySelectorAll("p, h1, h2, h3, img, div");
+  elements.forEach(el => observer.observe(el));
 }
 
 document.addEventListener("DOMContentLoaded", () => {
