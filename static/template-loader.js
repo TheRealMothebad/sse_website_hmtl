@@ -40,18 +40,35 @@ async function loadTemplates(root = document) {
 }
 
 function fade_in() {
-  const observer = new IntersectionObserver((entries) => {
+
+  const allElements = [...document.querySelectorAll("p, h1, h2, h3, img, div, li")];
+
+  // Get elements currently in viewport
+  const inView = allElements.filter(el => {
+    const rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  });
+
+  // Stagger fade in for visible elements
+  inView.forEach((el, i) => {
+    setTimeout(() => {
+      el.classList.add("visible");
+    }, i * 120); // 150ms delay between elements
+  });
+
+  // Observe the rest for lazy fade in
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // only fade in once
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.2 });
 
-  // Select all elements you want to animate
-  const elements = document.querySelectorAll("p, h1, h2, h3, img, div");
-  elements.forEach(el => observer.observe(el));
+  allElements
+    .filter(el => !inView.includes(el))
+    .forEach(el => observer.observe(el));
 }
 
 document.addEventListener("DOMContentLoaded", () => {
