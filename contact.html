@@ -10,10 +10,15 @@
   <!-- Include the template -->
   <div data-include="templates/layout.html">
     <!-- Fill slots -->
+    <div slot="header">
+      <section class="page-title-banner">
+        <h1>Contact Us</h1>
+      </section>
+    </div>
 
     <div slot="content">
       <!-- Contact Section -->
-      <section id="contact" class="content-section fade-in">
+      <section id="contact" class="content-section">
         <div class="text">
           <h2>Contact Us</h2>
           <p>Email: <strong>team@example.com</strong></p>
@@ -24,7 +29,6 @@
   </div>
 
   <script src="static/template-loader.js"></script>
-  <script src="static/script.js"></script>
 </body>
 </html>
 
