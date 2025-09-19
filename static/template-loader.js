@@ -41,7 +41,7 @@ async function loadTemplates(root = document) {
 
 function fade_in() {
 
-  const allElements = [...document.querySelectorAll("p, h1, h2, h3, img, div, li")];
+  const allElements = [...document.querySelectorAll("p, h1, h2, h3, img, div, tr, li")];
 
   // Get elements currently in viewport
   const inView = allElements.filter(el => {
