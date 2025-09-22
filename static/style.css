@@ -146,6 +146,10 @@ text-align: center;
   border-radius: 8px;
 }
 
+.text {
+  margin: 20px;
+}
+
 /* Responsive: stack on small screens */
 @media (max-width: 768px) {
   .split-section {
