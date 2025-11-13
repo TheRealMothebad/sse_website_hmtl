@@ -64,6 +64,7 @@ body {
   margin-left:auto;
   margin-right:auto;
   margin-top:2em;
+  text-align: center;
 }
 
 /* Hero section (what you see first on the home page) */
@@ -151,7 +152,24 @@ text-align: center;
 }
 
 /* Responsive: stack on small screens */
-@media (max-width: 768px) {
+@media (max-width: 630px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+
   .split-section {
     flex-direction: column;
   }
@@ -213,3 +231,71 @@ p, h1, h2, h3, img, div, tr, li {
     transform: translateY(0);
   }
 }
+
+/* Team Table */
+.team-table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-collapse: collapse;
+  margin-bottom: 2em;
+  border-radius: 8px; /* Added for rounded corners */
+  overflow: hidden; /* Ensures border-radius is applied to children */
+}
+
+.team-table th, .team-table td {
+  border: 1px solid #ddd;
+  padding: 12px; /* Increased padding for bigger text appearance */
+  text-align: left;
+  font-size: 1.1em; /* Bigger text for table cells */
+}
+
+.team-table th {
+  background-color: var(--color-accent-light);
+  color: white;
+  font-size: 1.2em; /* Bigger text for table headers */
+}
+
+
+/* Sponsors Page */
+.sponsor-tier {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.sponsor-tier h3 {
+  font-size: 2em;
+  color: var(--color-accent);
+  margin-bottom: 1em;
+}
+
+.sponsor-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.sponsor-logo {
+  max-height: 150px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.platinum .sponsor-logo {
+  max-height: 250px;
+  width: 80%;
+}
+
+.gold .sponsor-logo {
+  max-height: 200px;
+  width: 40%;
+}
+
+.silver .sponsor-logo {
+  max-height: 120px;
+  width: 25%;
+}
+
+
