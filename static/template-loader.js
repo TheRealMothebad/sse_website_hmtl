@@ -34,9 +34,33 @@ async function loadTemplates(root = document) {
   // 🔁 Re-run until there are no more includes
   if (document.querySelector("[data-include]")) {
     await loadTemplates(document);
+  } else {
+    initializeNavbarScroll();
   }
 
   fade_in()
+}
+
+function initializeNavbarScroll() {
+  let lastScrollTop = 0;
+  const navbar = document.querySelector('.navbar');
+
+  if (!navbar) {
+    console.error("Navbar element not found for scroll hiding.");
+    return;
+  }
+
+  window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop && scrollTop > navbar.offsetHeight) {
+      // Downscroll
+      navbar.classList.add('navbar-hidden');
+    } else {
+      // Upscroll
+      navbar.classList.remove('navbar-hidden');
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+  });
 }
 
 function fade_in() {

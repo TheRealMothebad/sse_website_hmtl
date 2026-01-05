@@ -26,27 +26,42 @@
         <div class="hero-text">Supermileage Systems Enterprise</div>
       </section>
 
-        <div data-include="templates/quote.html">
-          <div slot="quote">“All Gas, No Brakes”</div>
-          <div slot="source">—Team Moto</div>
+        <div data-include="templates/page-title.html">
+          <div slot="title">Our Team</div>
+          <div slot="title-content">
+            <div style="display: flex; justify-content: space-around; gap: 2em; flex-wrap: wrap">
+              <h2 style="width: 120px">40+<br>Students</h2>
+              <h2 style="width: 120px">11<br>Majors</h2>
+              <h2 style="width: 120px">25+<br>Years</h2>
+            </div>
+          </div>
         </div>
 
-        <div class="text">
-          <h2>We Are Tenacity</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed elit eu mi congue aliquet vel sed metus. Morbi blandit nibh vitae eros egestas elementum. Duis dui velit, sagittis et est id, sodales imperdiet dolor. Vivamus ut mi mi. Nam quis risus vitae enim maximus pulvinar id nec nibh. Quisque rutrum, lorem eu dignissim blandit, augue arcu viverra nisi, ut vulputate turpis nunc eget erat. Proin maximus eu libero a volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin libero leo, hendrerit eu auctor vel, convallis in velit. Suspendisse a vehicula tellus. Sed aliquet metus sem, sed pharetra tortor varius ac. Maecenas tincidunt mi vel tincidunt tincidunt. Donec ultrices nisl mi, sed imperdiet nibh vestibulum a.</p>
-        </div>
-        <div data-include="templates/image-carousel.html">
-        </div>
 
-        <div class="text">
-          <h2>We Are Tenacity</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed elit eu mi congue aliquet vel sed metus. Morbi blandit nibh vitae eros egestas elementum. Duis dui velit, sagittis et est id, sodales imperdiet dolor. Vivamus ut mi mi. Nam quis risus vitae enim maximus pulvinar id nec nibh. Quisque rutrum, lorem eu dignissim blandit, augue arcu viverra nisi, ut vulputate turpis nunc eget erat. Proin maximus eu libero a volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin libero leo, hendrerit eu auctor vel, convallis in velit. Suspendisse a vehicula tellus. Sed aliquet metus sem, sed pharetra tortor varius ac. Maecenas tincidunt mi vel tincidunt tincidunt. Donec ultrices nisl mi, sed imperdiet nibh vestibulum a.</p>
+      <div data-include="templates/left-text-right-image.html">
+        <div slot="image">
+          <img src="static/media/f2025_team_photo.jpg" alt="Photo of the Supermileage team in front of the Huskey statue at Michigan Tech">
         </div>
+        <h2 slot="title">Who We Are</h2>
+        <p slot="text">MTU Supermileage Systems is a student-run organization focused on the design, manufacturing, and testing of a single seat vehicle to achieve the greatest fuel economy possible.</p>
+      </div>
 
-        <div class="text">
-          <h2>We Are Tenacity</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed elit eu mi congue aliquet vel sed metus. Morbi blandit nibh vitae eros egestas elementum. Duis dui velit, sagittis et est id, sodales imperdiet dolor. Vivamus ut mi mi. Nam quis risus vitae enim maximus pulvinar id nec nibh. Quisque rutrum, lorem eu dignissim blandit, augue arcu viverra nisi, ut vulputate turpis nunc eget erat. Proin maximus eu libero a volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin libero leo, hendrerit eu auctor vel, convallis in velit. Suspendisse a vehicula tellus. Sed aliquet metus sem, sed pharetra tortor varius ac. Maecenas tincidunt mi vel tincidunt tincidunt. Donec ultrices nisl mi, sed imperdiet nibh vestibulum a.</p>
+      <div data-include="templates/page-title.html">
+        <div slot="title">Our Competition</div>
+      </div>
+
+      <div data-include="templates/left-text-right-image.html">
+        <div slot="image">
+          <img src="static/media/our_competition_image.png" alt="Photo of the Supermileage car at the start line of the Indianapolis Motor Speedway">
         </div>
+        <h2 slot="title">Shell Eco-Marathon</h2>
+        <p slot="text">Hosted at the Indianapolis Motor Speedway every year in April. The Shell Eco-Marathon Competition provides opportunities for teams around the world to compete and push the boundaries of efficiency. Allowing the development of advanced powertrains in Battery Electric, Internal Combustion Engine, Hydrogen Fuel Cell, and much more.</p>
+      </div>
+
+      <div class="text" style="display: none">
+        <h2>Join our Newsletter!</h2>
+        <p>Sign up with your email to receive regular newsletter and project updates!</p>
+      </div>
     </div>
   </div>
 
