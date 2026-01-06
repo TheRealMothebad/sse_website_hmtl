@@ -36,6 +36,7 @@ async function loadTemplates(root = document) {
     await loadTemplates(document);
   } else {
     initializeNavbarScroll();
+    highlightActiveNavLink();
   }
 
   fade_in()
@@ -60,6 +61,18 @@ function initializeNavbarScroll() {
       navbar.classList.remove('navbar-hidden');
     }
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+  });
+}
+
+function highlightActiveNavLink() {
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const currentPath = window.location.pathname.split('/').pop(); // Get current file name (e.g., "index.html")
+
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute('href');
+    if (linkPath === currentPath) {
+      link.classList.add('active-nav-link');
+    }
   });
 }
 

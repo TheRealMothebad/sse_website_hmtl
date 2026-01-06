@@ -63,6 +63,15 @@ body {
   width: 100%;
 }
 
+.nav-links li .active-nav-link::after {
+  width: 100%; /* Make the underline always visible */
+}
+
+/* Also ensure the active link itself is not affected by hover translate */
+.nav-links li .active-nav-link:hover {
+  transform: translateY(0); /* Override hover effect */
+}
+
 /* footer */
 .footer {
   display: flex;
@@ -363,24 +372,6 @@ p, h1, h2, h3, img, div, tr, li {
   opacity: 0.2;
 }
 
-@keyframes blob-morph {
-  0%, 100% {
-    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-    transform: translate(-50%, -50%) rotateZ(0.01deg);
-  }
-  34% {
-    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
-    transform:  translate(-50%, -40%) rotateZ(0.01deg);
-  }
-  50% {
-    transform: translate(-50%, -55%) rotateZ(0.01deg);
-  }
-  67% {
-    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
-    transform: translate(-50%, -50%) rotateZ(0.01deg);
-  }
-}
-
 .sponsor-images {
   display: flex;
   flex-wrap: wrap;
@@ -421,7 +412,7 @@ p, h1, h2, h3, img, div, tr, li {
 }
 
 .platinum .sponsor-images a {
-  flex-basis: calc(33.33% - 2em);
+  flex-basis: calc(33% - 2em);
 }
 .platinum .sponsor-logo {
     max-height: 150px;
