@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,500;1,17..18,500&family=Lexend:wght@600&display=swap');
+
 /* define colors used across the page */
 :root {
   --color-bg: #ffffff;
@@ -131,6 +133,10 @@ body {
   object-fit: cover;
 }
 .hero-text {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
   position: absolute;
   top: 40%;
   text-align: center;
@@ -139,12 +145,6 @@ body {
   font-size: 5vw;
   color: white;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
-  font-family: "Google Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings:
-    "GRAD" 0;
 }
 
 /* Page Title Banner */
